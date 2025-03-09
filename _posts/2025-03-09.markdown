@@ -1,0 +1,828 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>美好教育龙行天下</title>
+</head>
+<style>
+    * {
+        margin: 0;
+        padding: 0;
+    }
+    .top {
+        width: 2300px;
+        height: 250px;
+        background-image: url(image/实训楼白幕.jpg);
+        background-repeat: no-repeat;
+        background-size: 100% 100%;
+        display: flex;
+        align-items: center;
+        justify-content: space-around;
+        margin: auto;
+    }
+
+    .top .logo img {
+        width: 800px;
+        height: 250px;
+    }
+
+    .top .sou a img {
+        width: 50px;
+        margin: auto;
+        position: relative;
+        top: -215px;
+        left: 676px;
+        background-color: aqua;
+        z-index: 10000;
+    }
+
+    .input form input {
+        width: 300px;
+        height: 50px;
+        border: 0px solid rgb(231, 231, 231);
+        border-radius: 3px;
+        z-index: 1;
+        font-size: 17px;
+        color: rgb(101, 101, 101);
+        /* 去除点击时产生的黑色描边 */
+        outline: none;
+        /* 输入的元素缩进20个像素 */
+        text-indent: 20px;
+    }
+
+    .input p a {
+        text-decoration: none;
+        color: rgb(17, 17, 93);
+    }
+
+    .input p {
+        font-size: 15px;
+        color: rgb(0, 0, 0);
+        margin-bottom: 10px;
+    }
+
+    .input form {
+        height: 60px;
+        display: flex;
+    }
+
+    
+    .left_1 .left .li1 a {
+        text-decoration: none;
+        color: aliceblue;
+    }
+
+    .left_1 .left {
+        width: 0;
+        height: 0;
+        display: inline;
+        align-items: center;
+    }
+
+    .left_1 {
+        width: 2300px;
+        height: 70px;
+        background-color: rgb(21 21 114);
+        margin: auto;
+    }
+
+    .left_1 .left ul li a {
+        text-decoration: none;
+        color: rgb(17, 17, 93);
+        position: relative;
+        top: -240px;
+        left: -20px;
+        display: none;
+
+        width: 100px;
+        height: 30px;
+        padding: 20px;
+        line-height: 30px;
+        font-size: 20px;
+        background-color: rgba(255, 255, 255, 0.5);
+        position: relative;
+        top: 20px;
+        text-align: center;
+    }
+
+    .left_1 .left ul:hover li a {
+        display: block;
+        z-index: 1000;
+    }
+
+    .left_1 .left ul {
+        width: 100px;
+        height: 30px;
+        padding: 20px;
+        line-height: 30px;
+        font-size: 20px;
+        background-color: rgb(21 21 114);
+        text-align: center;
+        list-style: none;
+    }
+
+    .left_1 .left .li1 {
+        background-color: rgb(45, 70, 160);
+        position: relative;
+        left: -560px;
+        color: aliceblue;
+    }
+
+    .left_1 .left .li2 {
+        position: relative;
+        left: -420px;
+        top: -70px;
+        color: aliceblue;
+    }
+
+    .left_1 .left .li4 {
+        position: relative;
+        left: -280px;
+        top: -140px;
+        color: aliceblue;
+    }
+
+    .left_1 .left .li5 {
+        position: relative;
+        left: -140px;
+        top: -210px;
+        color: aliceblue;
+    }
+
+    .left_1 .left .li6 {
+        position: relative;
+        top: -280px;
+        color: aliceblue;
+    }
+
+    .left_1 .left .li7 {
+        position: relative;
+        left: 140px;
+        top: -350px;
+        color: aliceblue;
+    }
+
+    .left_1 .left .li8 {
+        position: relative;
+        left: 280px;
+        top: -420px;
+        color: aliceblue;
+    }
+
+    .left_1 .left .li9 {
+        position: relative;
+        left: 420px;
+        top: -490px;
+        color: aliceblue;
+    }
+
+    .left_1 .left .li10 {
+        position: relative;
+        left: 560px;
+        top: -560px;
+        color: aliceblue;
+    }
+
+    .left_1 .left ul li a:hover {
+        color: rgb(45, 70, 160);
+    }
+
+    .left_1 .left ul:hover {
+        background-color: rgb(45, 70, 160);
+    }
+
+    /* 轮播图 */
+    .image {
+        width: 2300px;
+        height: 800px;
+        margin: auto;
+        overflow: hidden;
+    }
+
+    .image img {
+        width: 100%;
+        height: 800px;
+    }
+
+    /* .image ul {
+        width: 9200px; */
+    /* animation: changeImg 10s linear infinite; */
+    /* }
+    .image ul li{
+        float: left;
+        list-style: none; 
+    }
+    .image ul li img {
+        width: 2300px;
+        height: 800px;
+    } */
+    @keyframes changeImg {
+        0% {
+            transform: translateX(0)
+        }
+
+        30% {
+            transform: translateX(0)
+        }
+
+        33% {
+            transform: translateX(-2300px)
+        }
+
+        63% {
+            transform: translateX(-2300px)
+        }
+
+        65% {
+            transform: translateX(-4600px)
+        }
+
+        98% {
+            transform: translateX(-4600px)
+        }
+
+        100% {
+            transform: translateX(-6900px)
+        }
+    }
+
+
+    /* 通知公告 */
+    .center {
+        width: 1380px;
+        height: 450px;
+        margin: auto;
+        position: relative;
+    }
+
+    .center .name {
+        width: 60%;
+        height: 450px;
+        float: right;
+        position: relative;
+        z-index: 1;
+    }
+
+    .center .name ul li a {
+        text-decoration: none;
+        color: rgb(0, 0, 0);
+    }
+
+    .center .name ul li {
+        list-style: none;
+        width: 100%;
+        white-space: nowrap;
+        text-overflow: ellipsis;
+        overflow: hidden;
+        color: rgb(0, 0, 0);
+    }
+
+    .center .name ul li a:hover {
+        /* 设置鼠标悬浮到文字上更改颜色 */
+        color: #c8c7c7;
+    }
+
+    .center .name .div {
+        width: 88%;
+        height: 70px;
+        border-bottom: 1px solid;
+        border-bottom-color: #c8c7c7;
+        margin: auto;
+    }
+
+    .center .name .div .p {
+        /* 通知公告 */
+        color: rgb(0, 0, 0);
+        font-size: 24px;
+    }
+
+    .center .name .div .p {
+        width: 120px;
+        height: 30px;
+        position: relative;
+        top: 20px;
+        left: 30px;
+    }
+
+    .center .name .div .p p {
+        display: inline;
+        text-align: center;
+    }
+
+    .center .name .div .p2 img {
+        /* 通知公告右边的三条杠 */
+        width: 60px;
+        height: 50px;
+        position: absolute;
+        top: -15px;
+        left: 620px;
+    }
+
+    .center .name ul {
+        /* 主题 */
+        position: absolute;
+        top: 90px;
+        left: 180px;
+        overflow: hidden;
+        white-space: nowrap;
+        width: 70%;
+        font-size: 19px;
+        line-height: 55px;
+        font-family: '宋体';
+    }
+
+    .center .name ol {
+        /* 日期 */
+        display: block;
+        list-style: none;
+        position: absolute;
+        top: 90px;
+        left: 70px;
+        color: rgb(0, 0, 0);
+        font-size: 18px;
+        line-height: 55px;
+        font-family: '宋体';
+    }
+
+    .center .name .div .p .p1:nth-of-type(1) {
+        color: rgb(45, 70, 160);
+        position: relative;
+        left: 5px;
+    }
+
+    .center .name .div .p2 {
+        width: 48px;
+        height: 34.8px;
+        position: absolute;
+        top: 33px;
+        left: 85px;
+        border-bottom: 6px solid rgb(45, 70, 160);
+    }
+
+    /* 白色板块 */
+    .center .name1 {
+        position: relative;
+    }
+
+    .center .name1 {
+        z-index: 10000;
+        width: 40%;
+        height: 450px;
+        /*  ↓  阴影 */
+        float: left;
+        position: absolute;
+        z-index: 1;
+    }
+
+    .center .name1 .div {
+        /* 图片新闻板块 */
+        width: 80%;
+        height: 70px;
+        border-bottom: 1px solid;
+        border-bottom-color: #c8c7c7;
+        margin: auto;
+    }
+
+    .center .name1 .div .p {
+        /* 图片新闻 */
+        color: rgb(0, 0, 0);
+        font-size: 24px;
+    }
+
+    .center .name1 .div .p {
+        width: 120px;
+        height: 30px;
+        position: relative;
+        top: 20px;
+        left: 30px;
+    }
+
+    .center .name1 .div .p p {
+        display: inline;
+        text-align: center;
+    }
+
+    .center .name1 .div .p .p1:nth-of-type(1) {
+        color: rgb(45, 70, 160);
+        position: relative;
+        left: 5px;
+    }
+
+    .center .name1 .name2 {
+        width: 80%;
+        height: 330px;
+        background-color: rgb(132, 0, 255);
+        border: 1px solid #c8c7c7;
+        margin: auto;
+        justify-content: center;
+        position: relative;
+        top: 15px;
+        overflow: hidden;
+    }
+
+    .center .name1 .name2 ul li img {
+        width: 441.6px;
+        height: 330px;
+    }
+
+    .center .name1 .name2 ul {
+        width: 1766.4px;
+        animation: change 10s linear infinite;
+    }
+
+    .center .name1 .name2 ul li {
+        float: left;
+        list-style: none;
+    }
+
+    @keyframes change {
+        0% {
+            transform: translateX(0)
+        }
+
+        30% {
+            transform: translateX(0)
+        }
+
+        33% {
+            transform: translateX(-441.6px)
+        }
+
+        63% {
+            transform: translateX(-441.6px)
+        }
+
+        65% {
+            transform: translateX(-883.2px)
+        }
+
+        98% {
+            transform: translateX(-883.2px)
+        }
+
+        100% {
+            transform: translateX(-1324.8px)
+        }
+    }
+
+    .center .name1 .div .p2 {
+        width: 48px;
+        height: 34.8px;
+        position: absolute;
+        top: 33px;
+        left: 90px;
+        border-bottom: 6px solid rgb(45, 70, 160);
+    }
+
+
+
+
+
+    /* 图片点击 */
+    .center-1 {
+        width: 1380px;
+        height: 450px;
+        margin: auto;
+        position: relative;
+    }
+
+    .center-1 ul {
+        width: 1350px;
+        height: 350px;
+        background-color: rgb(255, 255, 255);
+        margin: auto;
+        position: relative;
+        top: 60px;
+    }
+
+    .center-1 ul a li {
+        width: 280px;
+        height: 330px;
+        margin: auto;
+        list-style: none;
+        background-color: rgb(45, 70, 160);
+        float: left;
+        margin-right: 50px;
+        border: 1px solid rgb(203, 202, 202);
+        box-shadow: 3px 3px 10px #c8c7c7;
+        position: relative;
+        left: 40px;
+        text-decoration: none;
+        color: black;
+    }
+
+    .center-1 ul a li:hover {
+        animation: upward 0.4s linear both;
+    }
+
+    @keyframes upward {
+        0% {
+            transform: translateY(0)
+        }
+
+        100% {
+            transform: translateY(-20px);
+        }
+    }
+
+    .center-1 ul a li p {
+        width: 280px;
+        height: 50px;
+        background-color: rgba(255, 255, 255, 0.5);
+        text-align: center;
+        /* 设置文本水平居中 */
+        line-height: 50px;
+        /* 设置文本垂直居中 (将行高设置成和盒子高度一样)*/
+        font-size: 20px;
+        position: relative;
+        top: 200px;
+        text-decoration: none;
+        color: black;
+    }
+
+    .center-1 ul a .li1 {
+        background-image: url(image/红旗2.jpg);
+        background-repeat: no-repeat;
+        background-size: 100% 100%;
+    }
+
+    .center-1 ul a .li2 {
+        background-image: url(image/天空2.jpg);
+        background-repeat: no-repeat;
+        background-size: 100% 100%;
+    }
+
+    .center-1 ul a .li3 {
+        background-image: url(image/月亮.jpg);
+        background-repeat: no-repeat;
+        background-size: 100% 100%;
+    }
+
+    .center-1 ul a .li4 {
+        background-image: url(image/实训楼.jpg);
+        background-repeat: no-repeat;
+        background-size: 100% 100%;
+    }
+
+
+
+
+
+
+
+    /* 美好教育龙行天下 */
+    .bottom {
+        width: 2300px;
+        height: 230px;
+        background-image: url(image/底部.jpg);
+        background-repeat: no-repeat;
+        background-size: 100% 100%;
+        margin: auto;
+    }
+    .bottom .hr {
+        /* 最底下的下划线 */
+        width: 90%;
+        height: 2px;
+        border-bottom: 0.5px solid aliceblue;
+        margin: auto;
+        position: relative;
+        top: 175px;
+    }
+    .bottom .ul p {
+        display: inline-block;
+        color: aliceblue;
+        letter-spacing: 2px;
+        position: relative;
+        top: -40px;
+    }
+    .bottom .ul p img {
+        /* 图标 */
+        width: 20px;
+        height: 20px;
+        position: relative;
+        top: 5px;
+        right: 5px;
+        padding: 2px;
+    }
+
+    .bottom .ul p a {
+        /* 去除超链接下划线并且更改颜色 */
+        text-decoration: none;
+        color: aliceblue;
+    }
+    .bottom p img {
+        position: relative;
+        width: 800px;
+    }
+    .bottom .ul p a:hover {
+        color: rgb(142, 164, 243);
+    }
+    .bottom .p {
+        width: 300px;
+        height: 10px;
+        margin: auto;
+    }
+    .bottom .p p {
+        color: aliceblue;
+        position: relative;
+        top: -10px;
+        font-size: 11px;
+    }
+
+    /* 返回顶部按钮 */
+    .id a img {
+        width: 50px;
+        height: 50px;
+        border: 1px solid rgb(173, 173, 173);
+        background-color: rgba(0, 0, 0, 0.3);
+        position: fixed;
+        bottom: 150px;
+        right: 2%;
+    }
+</style>
+
+<body>
+    <div id="section"></div>
+
+    <!-- 头部 -->
+    <div class="top">
+        <div class="logo">
+            <img src="image/logo3.png" alt="">
+        </div>
+        <div class="input">
+            <p><a href="#">院长信箱</a>&nbsp;&nbsp;&nbsp;&nbsp;<b>/</b>&nbsp;&nbsp;&nbsp;&nbsp;
+                <a href="#">师德师风投诉举报信箱</a>&nbsp;&nbsp;&nbsp;&nbsp;<b>/</b>&nbsp;&nbsp;&nbsp;&nbsp;
+                <a href="登入框.html">在线投稿</a>
+            </p>
+            <form action="学校简介.html" method="get">
+                <input type="search" name="q">
+                <a href=""><img src="image/搜索.png" alt="" width="50px" style="background-color: aqua;"></a>
+            </form>
+        </div>
+    </div>
+    <!-- 点击按钮 -->
+    <div class="left_1">
+        <div class="left" align="center">
+            <ul class="li1">
+                <a href="首页.html" class="a">首页</a>
+            </ul>
+            <ul class="li2">
+                <li class=".a">校情总览</li>
+                <li class=".li3"><a href="学校简介.html">学校简介</a></li>
+                <li class=".li3"><a href="#">学校领导</a></li>
+                <li class=".li3"><a href="#">历史沿革</a></li>
+                <li class=".li3"><a href="#">办学理念</a></li>
+            </ul>
+            <ul class="li4">
+                <li class=".a">校园生活</li>
+                <li class=".li3"><a href="图书馆.html">图书馆</a></li>
+                <li class=".li3"><a href="#">体育运动</a></li>
+                <li class=".li3"><a href="#">最美瞬间</a></li>
+                <li class=".li3"><a href="校园风景.html">校园风景</a></li>
+            </ul>
+            <ul class="li5">
+                <li class=".a">专业设置</li>
+                <li class=".li3"><a href="#">电子商务</a></li>
+                <li class=".li3"><a href="#">农产品加工</a></li>
+                <li class=".li3"><a href="#">大数据技术</a></li>
+                <li class=".li3"><a href="#">智能物流</a></li>
+                <li class=".li3"><a href="#">计算机网络</a></li>
+            </ul>
+            <ul class="li6">
+                <li class=".a">党建思政</li>
+            </ul>
+            <ul class="li7">
+                <li class=".a">科学研究</li>
+                <li class=".li3"><a href="实训楼.html">实训楼</a></li>
+                <li class=".li3"><a href="#">科研成果</a></li>
+                <li class=".li3"><a href="#">学术刊登</a></li>
+                <li class=".li3"><a href="#">管理部门</a></li>
+            </ul>
+            <ul class="li8">
+                <li class=".a">招生就业</li>
+                <li class=".li3"><a href="#">合作企业</a></li>
+                <li class=".li3"><a href="#">招生人数</a></li>
+            </ul>
+            <ul class="li9">
+                <li class=".a">院系设置</li>
+                <li class=".li3"><a href="#">信息系</a></li>
+                <li class=".li3"><a href="#">农贸系</a></li>
+                <li class=".li3"><a href="#">教育系</a></li>
+            </ul>
+            <ul class="li10">
+                <li class=".a">联系我们</li>
+                <li class=".li3"><a href="#">校长办</a></li>
+                <li class=".li3"><a href="#">招生办</a></li>
+        </div>
+    </div>
+    <!-- 轮播图 -->
+    <div class="image">
+        <img src="image/轮播图/新正面.jpg" alt=""></li>
+    </div>
+    <!-- 通知公告 -->
+    <div class="center">
+        <!-- 白色板块 -->
+        <div class="name1">
+            <div class="div">
+                <p class="p2"></p>
+                <div class="p">
+                    <p class="p1">校园</p>
+                    <p class="p3">活动</p>
+                </div>
+            </div>
+            <div class="name2">
+                <ul>
+                    <li><img src="image/轮播图2/运动会.jpg" alt=""></li>
+                    <li><img src="image/轮播图2/颁奖.jpg" alt=""></li>
+                    <li><img src="image/轮播图2/演出.jpg" alt=""></li>
+                    <li><img src="image/轮播图2/运动会.jpg" alt=""></li>
+                </ul>
+            </div>
+        </div>
+        <!-- 红色板块 -->
+        <div class="name">
+            <div class="div">
+                <p class="p2"></p>
+                <div class="p">
+                    <p class="p1">通知</p>
+                    <p class="p3">公告</p>
+                </div>
+                <p class="p2"><a href="#"><img src="image/三条杠-02.png" alt=""></a></p>
+            </div>
+            <ol>
+                <li>2024-11-21</li>
+                <li>2024-11-20</li>
+                <li>2024-11-19</li>
+                <li>2024-11-18</li>
+                <li>2024-11-15</li>
+                <li>2024-11-14</li>
+            </ol>
+            <ul>
+                <li><a href="#">教学见“瓜”————我院进行剧中教学工作集中检查</a></li>
+                <li><a href="#">潜心研讨，逐梦前行————我院开展五专业人陪方案修订专家论证系列反馈会</a></li>
+                <li><a href="#">我院第二届趣味运动会圆满落幕</a>
+                    <p></p>
+                </li>
+                <li><a href="#">未雨绸缪————县领导来我院进行安全督察</a>
+                    <p></p>
+                </li>
+                <li><a href="#">第二届运动会精彩瞬间</a>
+                    <p></p>
+                </li>
+                <li><a href="#">跃动青春、团结逐梦，我院第二届趣味运动会开幕式</a>
+                    <p></p>
+                </li>
+            </ul>
+        </div>
+    </div>
+    <!-- 图片点击 -->
+    <div class="center-1">
+        <ul>
+            <a href="图书馆.html">
+                <li class="li1">
+                    <p>图书馆</p>
+                </li>
+            </a>
+            <a href="学校简介.html">
+                <li class="li2">
+                    <p>@I♥YHJ</p>
+                </li>
+            </a>
+            <a href="校园风景.html">
+                <li class="li3">
+                    <p>校园风景</p>
+                </li>
+            </a>
+            <a href="实训楼.html">
+                <li class="li4">
+                    <p>实训楼</p>
+                </li>
+            </a>
+        </ul>
+    </div>
+    <!-- 美好教育龙行天下 -->
+    <div class="bottom">
+        <div class="hr"></div>
+        <p align="center"><img src="image/美好教育龙行天下(白色).png" alt=""></p>
+        <div class="ul" align="center">
+            <p><img src="image/联系电话.png" alt="">联系电话:123456789</p>
+            <p>&nbsp;&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;&nbsp;</p>
+            <p><img src="image/地址.png" alt="">学校地址:江西省赣州市安远县产城新区重石大道南侧</p>
+            <p>&nbsp;&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;&nbsp;</p>
+            <p><img src="image/邮箱.png" alt="">电子邮箱:123456@outlook.com</p>
+            <p>&nbsp;&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;&nbsp;</p>
+            <p><img src="image/意见反馈.png" alt=""><a href="#">意见反馈</a></p>
+        </div>
+        <div class="p">
+            <p>版权所有&nbsp;&nbsp;&copy;&nbsp;&nbsp;2024&nbsp;&nbsp;ABC&nbsp;&nbsp;Company.&nbsp;&nbsp;All&nbsp;&nbsp;Rights&nbsp;&nbsp;Reserved.
+            </p>
+        </div>
+    </div>
+    <!-- 返回顶部按钮 -->
+    <div class="id">
+        <a href="#section"><img src="image/向上按钮.png" alt=""></a>
+    </div>
+</body>
+</html>
